@@ -1,0 +1,29 @@
+{
+  "name": "api-abuse-system",
+  "version": "1.0.0",
+  "description": "Role 1: Request Handling & Enforcement (Critical Path)",
+  "main": "index.js",
+  "scripts": {
+  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+  "build": "tsc",
+  "start": "node dist/server.js"
+}
+,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhi-jith-2006/API-Abuse-Detection-Behavior-Analysis-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Abhi-jith-2006/API-Abuse-Detection-Behavior-Analysis-System/issues"
+  },
+  "homepage": "https://github.com/Abhi-jith-2006/API-Abuse-Detection-Behavior-Analysis-System#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}
