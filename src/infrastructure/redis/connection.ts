@@ -1,0 +1,10 @@
+import { ConnectionOptions } from "bullmq";
+
+export function getRedisConnectionOptions(): ConnectionOptions {
+  return {
+    host: process.env.REDIS_HOST || "localhost",
+    port: Number(process.env.REDIS_PORT) || 6379,
+    maxRetriesPerRequest: null,
+  };
+}
+
