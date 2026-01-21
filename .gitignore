@@ -1,7 +1,3 @@
 node_modules
-<<<<<<< HEAD
-dist
-=======
 disk/
->>>>>>> main
 .env
