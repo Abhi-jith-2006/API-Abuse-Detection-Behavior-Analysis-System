@@ -8,5 +8,4 @@ export interface requestLogEvents {
     ipHash: string;
     
     userId: string|null;
-    apiKeyId: string|null;
 }
