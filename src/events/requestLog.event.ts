@@ -1,6 +1,6 @@
 export interface requestLogEvents {
-    eventId: string;
-    occuredAt: Date;
+    requestId: string;
+    occurredAt: Date;
     method: string;
     path: string;
     statusCode: number;
