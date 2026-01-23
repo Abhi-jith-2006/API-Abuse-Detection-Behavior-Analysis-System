@@ -1,10 +1,10 @@
 import { Pool, PoolClient } from "pg";
 
-const pool = new Pool({
+export const db = new Pool({
   host: process.env.DB_HOST || "localhost",
   port: Number(process.env.DB_PORT) || 5432,
-  user: process.env.DB_USER || "postgres",
-  password: process.env.DB_PASSWORD || "postgres",
+  user: process.env.DB_USER || "abhiiths",
+  password: process.env.DB_PASSWORD || "abhiiths",
   database: process.env.DB_NAME || "api_abuse",
   max: 10,
   idleTimeoutMillis: 30_000,
@@ -12,5 +12,6 @@ const pool = new Pool({
 });
 
 export async function getDbClient(): Promise<PoolClient> {
-  return pool.connect();
+  return db.connect();
 }
+

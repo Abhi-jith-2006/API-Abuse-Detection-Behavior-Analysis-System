@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Abhi-jith-2006/API-Abuse-Detection-Behavior-Analysis-System#readme",
   "devDependencies": {
+    "@types/luxon": "^3.7.1",
     "@types/node": "^20.19.30",
     "@types/pg": "^8.16.0",
     "@types/uuid": "^10.0.0",
