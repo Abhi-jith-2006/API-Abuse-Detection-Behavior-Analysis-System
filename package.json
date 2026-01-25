@@ -21,16 +21,20 @@
   },
   "homepage": "https://github.com/Abhi-jith-2006/API-Abuse-Detection-Behavior-Analysis-System#readme",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/luxon": "^3.7.1",
     "@types/node": "^20.19.30",
     "@types/pg": "^8.16.0",
     "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "5.4"
   },
   "dependencies": {
     "bullmq": "^5.66.5",
     "dotenv": "^17.2.3",
+    "epress": "^0.0.1-security",
+    "express": "^5.2.1",
     "ioredis": "^5.9.2",
     "luxon": "^3.7.2",
     "pg": "^8.17.1",
