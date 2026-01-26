@@ -22,7 +22,7 @@ export async function runIncidentDetectionWorker(): Promise<void> {
     const { rows } = await client.query<MetricRow>(
       `
       SELECT *
-      FROM request_metric_5m
+      FROM request_metrics_5m
       WHERE incidents_processed = false
       ORDER BY window_start
       LIMIT $1
@@ -55,7 +55,7 @@ export async function runIncidentDetectionWorker(): Promise<void> {
      
       await client.query(
         `
-        UPDATE request_metric_5m
+        UPDATE request_metrics_5m
         SET incidents_processed = true
         WHERE id = $1
         `,
