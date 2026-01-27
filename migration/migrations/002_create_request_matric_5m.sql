@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS request_metrics_5m (
   path TEXT NOT NULL,
   method TEXT NOT NULL,
   incidents_processed TEXT NOT NULL,
-
+  api_key TEXT NOT NULL
   request_count INT NOT NULL,
   error_count INT NOT NULL,
   avg_latency_ms INT NOT NULL,

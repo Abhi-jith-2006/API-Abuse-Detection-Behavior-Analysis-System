@@ -4,11 +4,11 @@ export interface RequestMetric5m {
   apiKey: string;
   windowStart: Date;
   windowEnd: Date;
-
   requestCount: number;
   errorCount: number;
   avgLatencyMs: number;
 }
+
 
 
 export type IncidentSeverity = 'low' | 'medium' | 'high' | 'critical';

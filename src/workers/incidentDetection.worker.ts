@@ -19,17 +19,22 @@ const BATCH_SIZE = 100;
 export async function runIncidentDetectionWorker(): Promise<void> {
   await withTransaction(db , async (client) => {
     
-    const { rows } = await client.query<MetricRow>(
-      `
-      SELECT *
-      FROM request_metrics_5m
-      WHERE incidents_processed = false
-      ORDER BY window_start
-      LIMIT $1
-      FOR UPDATE SKIP LOCKED
-      `,
-      [BATCH_SIZE]
-    );
+    const { rows } = await client.query(
+  `
+  SELECT
+    window_start,
+    api_key,
+    request_count,
+    error_count,
+    avg_latency_ms
+  FROM request_metrics_5m
+  WHERE incident_processed = false
+  ORDER BY window_start
+  FOR UPDATE SKIP LOCKED
+  LIMIT $1
+  `,
+  [BATCH_SIZE]
+)
 
     if (rows.length === 0) {
       return;

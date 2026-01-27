@@ -1,4 +1,4 @@
--- migrations/001_create_request_logs.sql
+
 
 CREATE TABLE IF NOT EXISTS request_logs (
   id BIGSERIAL PRIMARY KEY,
